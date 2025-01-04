@@ -166,15 +166,16 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
     }
   }
 
-  /* The loops heare are redundant but BAM needs to run as fast as possible to avoid flickering.
+  /* The loops here are redundant but BAM needs to run as fast as possible to avoid flickering.
   That's why we can't afford function calls during the interrupt. Also Arduino does not support the inline keyword.
   For this prototype I don't really care about the repetition.
-  TODO: Use a macro or try always_inline
+  TODO: Use a macro or try always_inline attribute
   */
 
      ////////
     //blue//
    ////////
+  
   for (int i=0; i<8; i++){
     // clock low
     bitClear(PORTB, clockPinPORTB);
@@ -198,6 +199,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
      /////////
     //green//
    /////////
+  
   for (int i=0; i<8; i++){
     // clock low
     bitClear(PORTB, clockPinPORTB);
@@ -221,6 +223,7 @@ ISR(TIMER1_COMPA_vect)          // timer compare interrupt service routine
      ///////
     //red//
    ///////
+  
   for (int i=0; i<8; i++){
     // clock low
     bitClear(PORTB, clockPinPORTB);
@@ -306,6 +309,7 @@ void loop(){
    //////////////////
   //fft animation//
  //////////////////
+  
   hsvToRgb(120, 1, 1);
   int static i = 0;
   int val; //ADHC storage
