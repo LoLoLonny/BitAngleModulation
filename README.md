@@ -5,7 +5,7 @@ This sketch implements binary code modulation (also called bit angle modulation)
 Multiplexing is a method of signal transmission used to combine several pieces of data. In the case of an LED matrix, the anodes and cathodes of the LEDs are soldered to form the rows and columns of a matrix. This reduces the number of control pins required.
 This project uses “common anode” RGB LEDs. These each have an anode for the common power supply and three cathodes for the individual colors.
 
-![image](https://github.com/user-attachments/assets/43a1a686-dfb6-40ef-9111-932a34af7d74)
+<img src="https://github.com/user-attachments/assets/43a1a686-dfb6-40ef-9111-932a34af7d74" alt="drawing" width="200"/>
 
 The multiplex matrix is controlled by bit shift registers. A shift register receives data serially and forwards it in parallel.A shift register can receive and forward one byte.This means that eight rows of LEDs can be controlled with one pin. Four shift registers are used in this project. Three for the rows (8xR,8xG,8xB) and one to control the six columns of the matrix.
 
