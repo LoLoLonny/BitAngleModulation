@@ -9,4 +9,4 @@ This project uses “common anode” RGB LEDs. These each have an anode for the 
 
 The multiplex matrix is controlled by bit shift registers. A shift register receives data serially and forwards it in parallel.A shift register can receive and forward one byte.This means that eight rows of LEDs can be controlled with one pin. Four shift registers are used in this project. Three for the rows (8xR,8xG,8xB) and one to control the six columns of the matrix.
 
-The Sketch starts with a short demo that prints out words and then reads a raw audio signal from the ADCH and interprets it with a FFT implementation. The implementation of the FFT is not mine. I found it online [](http://www.instructables.com/id/Arduino-Frequency-Detection/).
+The Sketch starts with a short demo that prints out words and then reads a raw audio signal from the ADCH and interprets it with a FFT implementation. The implementation of the FFT is not mine. I found it online [http://www.instructables.com/id/Arduino-Frequency-Detection/](http://www.instructables.com/id/Arduino-Frequency-Detection/).
